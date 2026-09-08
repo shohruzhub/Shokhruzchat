@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shokhruz Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <section id="authScreen" class="screen">
+    <div class="authCard">
+      <div class="logo">✨ Shokhruz Chat</div>
+      <p class="subtitle">Private conversations made simple.</p>
+
+      <div class="tabs">
+        <button id="loginTab" class="tab active">Log In</button>
+        <button id="signupTab" class="tab">Create Account</button>
+      </div>
+
+      <input id="authUsername" placeholder="Username" autocomplete="username">
+      <div id="usernameStatus"></div>
+
+      <input id="authPassword" type="password" placeholder="Password" autocomplete="current-password">
+
+      <button id="authButton" class="mainButton">Log In</button>
+
+      <p id="authError" class="error"></p>
+    </div>
+  </section>
+
+  <section id="chooseScreen" class="screen hidden">
+    <div class="chooseCard">
+      <div class="logo">✨ Shokhruz Chat</div>
+
+      <h1>Who do you want to chat with?</h1>
+      <p class="subtitle">Enter their exact username.</p>
+
+      <input id="chatUsername" placeholder="Enter username" autocomplete="off">
+
+      <button id="doneButton" class="mainButton">Done</button>
+
+      <button id="chooseLogout" class="secondaryButton">Log Out</button>
+
+      <p id="chooseError" class="error"></p>
+    </div>
+  </section>
+
+  <section id="chatScreen" class="chatScreen hidden">
+
+    <header class="chatHeader">
+      <button id="backButton" class="backButton">←</button>
+
+      <div>
+        <strong id="chatWith">Chat</strong>
+        <small>Private conversation</small>
+      </div>
+    </header>
+
+    <main id="messages" class="messages">
+      <div class="empty">
+        No messages yet. Say hello! 👋
+      </div>
+    </main>
+
+    <form id="messageForm" class="messageForm">
+      <input
+        id="messageInput"
+        placeholder="Type a message..."
+        maxlength="2000"
+        autocomplete="off"
+      >
+
+      <button type="submit">➤</button>
+    </form>
+
+  </section>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
